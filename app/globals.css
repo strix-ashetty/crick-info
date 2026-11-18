@@ -1,0 +1,116 @@
+
+@import "tailwindcss";
+
+:root {
+  --background: #f4f7f6;
+  --foreground: #172321;
+  --primary: #087f5b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.form-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.form-card {
+  width: 100%;
+  max-width: 480px;
+  background: white;
+  padding: 36px;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e5ece9;
+}
+
+.form-header {
+  margin-bottom: 30px;
+}
+
+.form-header h1 {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0 0 8px;
+}
+
+.form-header p {
+  color: #71817b;
+  font-size: 14px;
+  margin: 0;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #dce5e1;
+  border-radius: 8px;
+  font-size: 14px;
+  background: white;
+  color: #172321;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(8, 127, 91, 0.1);
+}
+
+.form-group input::placeholder {
+  color: #a0aaa5;
+}
+
+.error-message {
+  color: #dc2626;
+  font-size: 12px;
+  margin-top: 6px;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 13px;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.submit-btn:hover {
+  background: #066b4d;
+}
+
+@media (max-width: 500px) {
+  .form-card {
+    padding: 24px;
+  }
+}
